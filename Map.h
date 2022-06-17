@@ -9,7 +9,7 @@
 class Map
 {
     public:
-        void print() const;
+        void Print() const;
     private:
 
         std::vector<Land*> lands_;

@@ -8,7 +8,7 @@
 class Jail : public Land
 {
     public:
-        virtual void print() const
+        virtual void Print() const
         {
             std::cout << "=";
             for( auto &i : who_is_here )
@@ -17,9 +17,15 @@ class Jail : public Land
             }
             std::cout << "\t= [" << id_ << "]" << "\t" << name_ << "\t\t" << std::endl;
         };
+        static int Totalnum()
+        {
+            return Jail::num_;
+        }
     private:
         int id_ = 0;
         std::string name_ = "Jail";
+        static int num_;
 };
+
 
 #endif

@@ -6,14 +6,13 @@
 class Land
 {
     public:
-        Land() { Land_num_++; };
-        ~Land() { Land_num_--; };
+        Land(int id) : id_(id) {};
+        ~Land() {};
 
-        static int get_land_num() { return Land_num_; };
-        virtual void print() const;
-        static int Land_num_;
+        virtual void Print() const {};
     protected:
         std::vector <int> who_is_here;
+        int id_ = 0;
     private:
 };
 
