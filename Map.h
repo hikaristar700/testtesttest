@@ -12,8 +12,8 @@ class Map
         void print() const;
     private:
 
-        std::vector<Land*> lands_ = nullptr;
-        std::vector<Player*> players_ = nullptr;
+        std::vector<Land*> lands_;
+        std::vector<Player*> players_;
 };
 
 #endif

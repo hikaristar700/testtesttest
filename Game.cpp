@@ -7,10 +7,12 @@
 #include "Jail.h"
 #include "Player.h"
 
-int main(viod)
+using namespace std;
+
+int Land::Land_num_ = 0;
+int main(void)
 {
-
-
-
+    cout << "test" << endl;
+    cout << Land::Land_num_ << endl;
     return 0;
 }
