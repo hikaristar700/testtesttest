@@ -8,6 +8,8 @@
 class Jail : public Land
 {
     public:
+        Jail(int id) : Land(id) { num_++; };
+        ~Jail() { num_--; };
         virtual void Print() const
         {
             std::cout << "=";

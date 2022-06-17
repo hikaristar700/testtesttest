@@ -33,10 +33,6 @@ class Upgradableconutry : public Country
         Upgradableconutry( int id, int price, std::string name, std::vector<int> &fine ): Country(id, price, name), fine_(fine)
         {
             num_++;
-            for( auto &i : fine_ )
-            {
-                std::cout << i << " " << std::endl;
-            }
         };
         ~Upgradableconutry(){ num_--; };
         virtual void Print() const {};
@@ -78,6 +74,8 @@ class Collectablecountry : public Country
 class Randomcostcountry : public Country
 {
     public:
+        Randomcostcountry( int id, int price, std::string name ) : Country(id, price, name) { num_++; };
+        ~Randomcostcountry() { num_--; };
         virtual void Print() const {};
         virtual int Calculatefine() const
         {

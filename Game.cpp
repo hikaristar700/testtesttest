@@ -15,7 +15,7 @@ int Jail::num_ = 0;
 
 int Totalnum()
 {
-    // cout << Upgradableconutry::Totalnum() <<" "<< Collectablecountry::Totalnum() <<" "<< Randomcostcountry::Totalnum() <<" "<< Jail::Totalnum() << endl;
+    cout << Upgradableconutry::Totalnum() <<" "<< Collectablecountry::Totalnum() <<" "<< Randomcostcountry::Totalnum() <<" "<< Jail::Totalnum() << endl;
     return Upgradableconutry::Totalnum() + Collectablecountry::Totalnum() + Randomcostcountry::Totalnum() + Jail::Totalnum();
 }
 
