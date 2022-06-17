@@ -1,23 +1,46 @@
 #include "Country.h"
 
-void Country::setId(const int &input){ id = input; }
+void Country::setId(const int &input)
+{ 
+    id_ = input; 
+}
 
-int Country::getId() const { return id; }
+int Country::getId() const 
+{ 
+    return id_; 
+}
 
-void Country::setPrice(const int &input){ price = input; }
+void Country::setPrice(const int &input)
+{
+    price_ = input;
+}
 
-int Country::getPrice() const { return price; }
+int Country::getPrice() const 
+{
+    return price_;
+}
 
-void Country::setFine(const int *input, const int &size){
-    fine = new int[size]()
+void Country::setFine(const int *input, const int &size)
+{
+    fine_ = new int[size]()
 
-    for(int i = 0; i < size; ++i){
+    for(int i = 0; i < size; ++i)
+    {
         fine[i] = input[i];
     }
 }
 
-void Country::getFine(const int &pos) const { return fine[pos]; }
+void Country::getFine(const int &pos) const 
+{ 
+    return fine[pos]; 
+}
 
-void Country::setName(const string &str){ name = str; }
+void Country::setName(const string &str)
+{ 
+    name_ = str; 
+}
 
-string Country::getName() const { return name; }
+string Country::getName() const 
+{ 
+    return name_; 
+}

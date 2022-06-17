@@ -3,22 +3,23 @@
 
 #include <string>
 
-class Player{
-public:
-    void setId(const int &);
-    int getId() const;
+class Player
+{
+    public:
+        void setId(const int &);
+        int getId() const;
 
-    void setName(const string &);
-    string getName() const;
+        void setName(const string &);
+        string getName() const;
 
-    void changeWallet(const int &);
-    int getWallet() const;
+        void changeMoney(const int &);
+        int getMoney() const;
 
-    void changeUnit();
-    int getUnit() const;
-private:
-    int id = 0, wallet = 30000, unit = 0;
-    string name;
+        void changeUnit();
+        int getUnit() const;
+    private:
+        int id_ = 0, money_ = 30000, unit_ = 0;
+        std::string name_;
 };
 
 #endif
