@@ -2,24 +2,39 @@
 #define COUNTRY_H
 
 #include <string>
+#include "Land.h"
 
-class Country
+class Country : public Land
 {
     public:
-        void setId(const int &);
-        int getId() const;
+        virtual void print() {} const;
+        virtual int calculatefine() {} const;
 
-        void setPrice(const int &);
-        int getPrice() const;
-
-        void setFine(const int *, const int &);
-        int getFine(const int &) const;
-
-        void setName(const string &);
-        string getName() const;
     private:
-        int id_ = 0, price_ = 0, *fine_ = 0;
-        string name_;
+        int id_ = 0, price_ = 0;
+        string name_ ="";
+};
+
+class Upgradableconutry : public Country
+{
+    public:
+        virtual void print() const;
+        virtual int calculatefine() const;
+
+};
+
+class Collectablecountry : public Country
+{
+    public:
+        virtual void print() const;
+        virtual int calculatefine() const;
+};
+
+class Randomcostcountry : public Country
+{
+    public:
+        virtual void print() const;
+        virtual int calculatefine() const;
 };
 
 #endif
